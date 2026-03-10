@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "schema_version": "1.0",
+    "descricao": "Estrutura normalizada esperada para alimentar o banco local a partir de uma requisicao da API.",
+    "request_context": {
+      "edital_codigo": "12",
+      "filtro": "solicitacoes",
+      "categoria_codigo": 5,
+      "categoria_resolvida_por_processamento": "solicitacoes"
+    },
+    "regras_processamento": {
+      "modo_persistencia": "upsert",
+      "atualizar_se_existir": true,
+      "inserir_se_nao_existir": true,
+      "tabelas_derivadas_no_processamento": [
+        "categorias",
+        "sync_logs"
+      ],
+      "tabelas_esperadas_no_payload_normalizado": [
+        "edital",
+        "modalidades",
+        "vagas",
+        "inscricoes",
+        "grupos",
+        "subgrupos",
+        "anexos",
+        "documentos"
+      ],
+      "chaves_naturais_sugeridas": {
+        "edital": [
+          "codigo"
+        ],
+        "modalidade": [
+          "codigo",
+          "edital_codigo"
+        ],
+        "vaga": [
+          "codigo",
+          "modalidade_codigo"
+        ],
+        "inscricao": [
+          "codigo"
+        ],
+        "grupo": [
+          "categoria_resolvida",
+          "nome"
+        ],
+        "subgrupo": [
+          "grupo_nome",
+          "descricao"
+        ],
+        "anexo": [
+          "inscricao_codigo",
+          "subgrupo_descricao"
+        ],
+        "documento": [
+          "inscricao_codigo",
+          "subgrupo_descricao",
+          "url"
+        ]
+      }
+    },
+    "observacao": "Na categoria 5, o retorno original so informa codigo da inscricao, descricao do subgrupo e URLs. O processamento deve normalizar isso nas secoes abaixo."
+  },
+  "edital": {
+    "codigo": "12",
+    "titulo": null,
+    "descricao": null,
+    "tipo_documento": "solicitacoes",
+    "situacao": null,
+    "raw_payload": {
+      "source": "api_request_context_only"
+    }
+  },
+  "modalidades": [],
+  "vagas": [],
+  "inscricoes": [
+    {
+      "codigo": "2516",
+      "edital_codigo": "12",
+      "vaga_codigo": null,
+      "status": null,
+      "inicio": null,
+      "fim": null,
+      "raw_payload": {
+        "2516": {
+          "Desejo participar da Vaga especial para PcD": [
+            "https://cdn-hml.testes.net.br/candidato/uploads/d718ed2c44170d6a1a3388e9ede4170e0bedc4ca/24012025-103904-317213.pdf"
+          ]
+        }
+      }
+    },
+    {
+      "codigo": "2517",
+      "edital_codigo": "12",
+      "vaga_codigo": null,
+      "status": null,
+      "inicio": null,
+      "fim": null,
+      "raw_payload": {
+        "2517": {
+          "Desejo participar da Vaga especial para PcD": [
+            "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+          ],
+          "Op\u00e7\u00e3o 2": [
+            "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105922-246444.pdf",
+            "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105926-378910.pdf",
+            "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105942-574639.pdf"
+          ],
+          "Uma Solicita\u00e7\u00e3o Qualquer": [
+            "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105849-354135.jpg",
+            "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105852-859162.jpg",
+            "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105856-102951.png"
+          ]
+        }
+      }
+    }
+  ],
+  "grupos": [],
+  "subgrupos": [
+    {
+      "grupo_nome": null,
+      "descricao": "Desejo participar da Vaga especial para PcD",
+      "categoria_resolvida": "solicitacoes",
+      "raw_payload": {
+        "descricao": "Desejo participar da Vaga especial para PcD"
+      }
+    },
+    {
+      "grupo_nome": null,
+      "descricao": "Op\u00e7\u00e3o 2",
+      "categoria_resolvida": "solicitacoes",
+      "raw_payload": {
+        "descricao": "Op\u00e7\u00e3o 2"
+      }
+    },
+    {
+      "grupo_nome": null,
+      "descricao": "Uma Solicita\u00e7\u00e3o Qualquer",
+      "categoria_resolvida": "solicitacoes",
+      "raw_payload": {
+        "descricao": "Uma Solicita\u00e7\u00e3o Qualquer"
+      }
+    }
+  ],
+  "anexos": [
+    {
+      "inscricao_codigo": "2516",
+      "edital_codigo": "12",
+      "vaga_codigo": null,
+      "subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+      "categoria_resolvida": "solicitacoes",
+      "nome": "Desejo participar da Vaga especial para PcD",
+      "tipo_documento": "solicitacoes",
+      "extensao_principal": "pdf",
+      "codigo_externo": null,
+      "raw_payload": {
+        "subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+        "urls": [
+          "https://cdn-hml.testes.net.br/candidato/uploads/d718ed2c44170d6a1a3388e9ede4170e0bedc4ca/24012025-103904-317213.pdf"
+        ]
+      }
+    },
+    {
+      "inscricao_codigo": "2517",
+      "edital_codigo": "12",
+      "vaga_codigo": null,
+      "subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+      "categoria_resolvida": "solicitacoes",
+      "nome": "Desejo participar da Vaga especial para PcD",
+      "tipo_documento": "solicitacoes",
+      "extensao_principal": "pdf",
+      "codigo_externo": null,
+      "raw_payload": {
+        "subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+        "urls": [
+          "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+        ]
+      }
+    },
+    {
+      "inscricao_codigo": "2517",
+      "edital_codigo": "12",
+      "vaga_codigo": null,
+      "subgrupo_descricao": "Op\u00e7\u00e3o 2",
+      "categoria_resolvida": "solicitacoes",
+      "nome": "Op\u00e7\u00e3o 2",
+      "tipo_documento": "solicitacoes",
+      "extensao_principal": "pdf",
+      "codigo_externo": null,
+      "raw_payload": {
+        "subgrupo_descricao": "Op\u00e7\u00e3o 2",
+        "urls": [
+          "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105922-246444.pdf",
+          "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105926-378910.pdf",
+          "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105942-574639.pdf"
+        ]
+      }
+    },
+    {
+      "inscricao_codigo": "2517",
+      "edital_codigo": "12",
+      "vaga_codigo": null,
+      "subgrupo_descricao": "Uma Solicita\u00e7\u00e3o Qualquer",
+      "categoria_resolvida": "solicitacoes",
+      "nome": "Uma Solicita\u00e7\u00e3o Qualquer",
+      "tipo_documento": "solicitacoes",
+      "extensao_principal": "jpg",
+      "codigo_externo": null,
+      "raw_payload": {
+        "subgrupo_descricao": "Uma Solicita\u00e7\u00e3o Qualquer",
+        "urls": [
+          "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105849-354135.jpg",
+          "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105852-859162.jpg",
+          "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105856-102951.png"
+        ]
+      }
+    }
+  ],
+  "documentos": [
+    {
+      "inscricao_codigo": "2516",
+      "subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+      "nome": "24012025-103904-317213.pdf",
+      "descricao": "Arquivo normalizado a partir da URL do anexo.",
+      "url": "https://cdn-hml.testes.net.br/candidato/uploads/d718ed2c44170d6a1a3388e9ede4170e0bedc4ca/24012025-103904-317213.pdf",
+      "extensao": "pdf",
+      "raw_payload": {
+        "url": "https://cdn-hml.testes.net.br/candidato/uploads/d718ed2c44170d6a1a3388e9ede4170e0bedc4ca/24012025-103904-317213.pdf"
+      }
+    },
+    {
+      "inscricao_codigo": "2517",
+      "subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+      "nome": "24012025-104040-271119.pdf",
+      "descricao": "Arquivo normalizado a partir da URL do anexo.",
+      "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+      "extensao": "pdf",
+      "raw_payload": {
+        "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+      }
+    },
+    {
+      "inscricao_codigo": "2517",
+      "subgrupo_descricao": "Op\u00e7\u00e3o 2",
+      "nome": "26022025-105922-246444.pdf",
+      "descricao": "Arquivo normalizado a partir da URL do anexo.",
+      "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105922-246444.pdf",
+      "extensao": "pdf",
+      "raw_payload": {
+        "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105922-246444.pdf"
+      }
+    },
+    {
+      "inscricao_codigo": "2517",
+      "subgrupo_descricao": "Op\u00e7\u00e3o 2",
+      "nome": "26022025-105926-378910.pdf",
+      "descricao": "Arquivo normalizado a partir da URL do anexo.",
+      "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105926-378910.pdf",
+      "extensao": "pdf",
+      "raw_payload": {
+        "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105926-378910.pdf"
+      }
+    },
+    {
+      "inscricao_codigo": "2517",
+      "subgrupo_descricao": "Op\u00e7\u00e3o 2",
+      "nome": "26022025-105942-574639.pdf",
+      "descricao": "Arquivo normalizado a partir da URL do anexo.",
+      "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105942-574639.pdf",
+      "extensao": "pdf",
+      "raw_payload": {
+        "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105942-574639.pdf"
+      }
+    },
+    {
+      "inscricao_codigo": "2517",
+      "subgrupo_descricao": "Uma Solicita\u00e7\u00e3o Qualquer",
+      "nome": "26022025-105849-354135.jpg",
+      "descricao": "Arquivo normalizado a partir da URL do anexo.",
+      "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105849-354135.jpg",
+      "extensao": "jpg",
+      "raw_payload": {
+        "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105849-354135.jpg"
+      }
+    },
+    {
+      "inscricao_codigo": "2517",
+      "subgrupo_descricao": "Uma Solicita\u00e7\u00e3o Qualquer",
+      "nome": "26022025-105852-859162.jpg",
+      "descricao": "Arquivo normalizado a partir da URL do anexo.",
+      "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105852-859162.jpg",
+      "extensao": "jpg",
+      "raw_payload": {
+        "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105852-859162.jpg"
+      }
+    },
+    {
+      "inscricao_codigo": "2517",
+      "subgrupo_descricao": "Uma Solicita\u00e7\u00e3o Qualquer",
+      "nome": "26022025-105856-102951.png",
+      "descricao": "Arquivo normalizado a partir da URL do anexo.",
+      "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105856-102951.png",
+      "extensao": "png",
+      "raw_payload": {
+        "url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/26022025-105856-102951.png"
+      }
+    }
+  ]
+}
