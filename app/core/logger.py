@@ -1,5 +1,22 @@
-# logger.py
+from __future__ import annotations
 
 import logging
 
-logger = logging.getLogger(__name__)
+_IS_CONFIGURED = False
+
+
+def configure_logging() -> None:
+    global _IS_CONFIGURED
+    if _IS_CONFIGURED:
+        return
+
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
+    )
+    _IS_CONFIGURED = True
+
+
+def get_logger(name: str) -> logging.Logger:
+    configure_logging()
+    return logging.getLogger(name)
