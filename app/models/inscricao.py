@@ -28,5 +28,10 @@ class Inscricao(TimestampMixin, Base):
     fim: Mapped[datetime | None] = mapped_column(DateTime(), nullable=True)
     raw_payload: Mapped[dict[str, Any] | None] = mapped_column(JSON(), nullable=True)
 
-    edital = relationship("Edital")
-    vaga = relationship("Vaga")
+    edital = relationship("Edital", back_populates="inscricoes", overlaps="vaga,inscricoes")
+    vaga = relationship("Vaga", back_populates="inscricoes", overlaps="edital,inscricoes")
+    anexos = relationship(
+        "Anexo",
+        back_populates="inscricao",
+        cascade="all, delete-orphan",
+    )

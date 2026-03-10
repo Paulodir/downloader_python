@@ -18,6 +18,21 @@ class Anexo(TimestampMixin, Base):
         nullable=True,
         index=True,
     )
+    inscricao_id: Mapped[int | None] = mapped_column(
+        ForeignKey("inscricoes.id", ondelete="CASCADE"),
+        nullable=True,
+        index=True,
+    )
+    categoria_id: Mapped[int | None] = mapped_column(
+        ForeignKey("categorias.id", ondelete="CASCADE"),
+        nullable=True,
+        index=True,
+    )
+    subgrupo_id: Mapped[int | None] = mapped_column(
+        ForeignKey("subgrupos.id", ondelete="CASCADE"),
+        nullable=True,
+        index=True,
+    )
     codigo: Mapped[str | None] = mapped_column(String(64), nullable=True, index=True)
     nome: Mapped[str] = mapped_column(String(255), nullable=False, default="")
     tipo_documento: Mapped[str | None] = mapped_column(String(64), nullable=True)
@@ -27,3 +42,11 @@ class Anexo(TimestampMixin, Base):
 
     edital = relationship("Edital", back_populates="anexos", overlaps="vaga,anexos")
     vaga = relationship("Vaga", back_populates="anexos", overlaps="edital,anexos")
+    inscricao = relationship("Inscricao", back_populates="anexos")
+    categoria = relationship("Categoria", back_populates="anexos")
+    subgrupo = relationship("Subgrupo", back_populates="anexos")
+    documentos = relationship(
+        "Documento",
+        back_populates="anexo",
+        cascade="all, delete-orphan",
+    )

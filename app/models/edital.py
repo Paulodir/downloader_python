@@ -41,6 +41,12 @@ class Edital(TimestampMixin, Base):
         cascade="all, delete-orphan",
         overlaps="vaga,anexos",
     )
+    inscricoes = relationship(
+        "Inscricao",
+        back_populates="edital",
+        cascade="all, delete-orphan",
+        overlaps="vaga,inscricoes",
+    )
     sync_logs = relationship(
         "SyncLog",
         back_populates="edital",

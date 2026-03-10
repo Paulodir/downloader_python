@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from sqlalchemy import select
+from sqlalchemy import delete, select
 from sqlalchemy.orm import Session
 
 from app.models.inscricao import Inscricao
@@ -17,3 +17,6 @@ class InscricaoRepository:
         self.session.add(inscricao)
         self.session.flush()
         return inscricao
+
+    def delete_by_edital_id(self, edital_id: int) -> None:
+        self.session.execute(delete(Inscricao).where(Inscricao.edital_id == edital_id))
