@@ -1,0 +1,12 @@
+id,descricao,versao,status,created_at,updated_at
+1,Requisição de Documentos,0,1,,
+2,Pedidos,0,1,,
+3,Titulos ,0,1,,
+4,Uploads do Edital,1,1,,
+5,Uploads do Candidato,1,1,, 
+6,Isenções,1,1,,
+7,Condições Especiais,1,1,,
+8,Solicitações,1,1,,
+9,Titulos,1,1,,
+10,Foto do Candidato,1,1,,
+11,Comprovantes,1,0,,

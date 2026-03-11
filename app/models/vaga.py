@@ -40,4 +40,3 @@ class Vaga(TimestampMixin, Base):
         cascade="all, delete-orphan",
         overlaps="edital,inscricoes",
     )
-    categorias = relationship("Categoria", back_populates="vaga")

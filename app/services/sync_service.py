@@ -22,6 +22,7 @@ from app.models import (
 )
 from app.repositories import (
     AnexoRepository,
+    CategoriaRepository,
     DocumentoRepository,
     EditalRepository,
     InscricaoRepository,
@@ -68,6 +69,7 @@ class SyncService:
             inscricao_repository = InscricaoRepository(session)
             anexo_repository = AnexoRepository(session)
             documento_repository = DocumentoRepository(session)
+            categoria_repository = CategoriaRepository(session)
             sync_log_repository = SyncLogRepository(session)
 
             edital = edital_repository.get_by_codigo(codigo_normalizado)
@@ -117,6 +119,7 @@ class SyncService:
                     self._sync_taxonomy_payload(
                         session=session,
                         payload=categoria_payload,
+                        categoria_repository=categoria_repository,
                         vaga_id=None,
                         categoria_cache=categoria_cache,
                         grupo_cache=grupo_cache,
@@ -142,6 +145,7 @@ class SyncService:
                             edital_id=edital.id,
                             modalidade_id=modalidade.id,
                             payload=vaga_payload,
+                            categoria_repository=categoria_repository,
                             categoria_cache=categoria_cache,
                             grupo_cache=grupo_cache,
                             subgrupo_cache=subgrupo_cache,
@@ -171,6 +175,7 @@ class SyncService:
                         edital_id=edital.id,
                         modalidade_id=modalidade_id,
                         payload=vaga_payload,
+                        categoria_repository=categoria_repository,
                         categoria_cache=categoria_cache,
                         grupo_cache=grupo_cache,
                         subgrupo_cache=subgrupo_cache,
@@ -193,6 +198,7 @@ class SyncService:
                     inscricao_id=None,
                     payload=normalized["root_payload"],
                     default_vaga_id=None,
+                    categoria_repository=categoria_repository,
                     categoria_cache=categoria_cache,
                     grupo_cache=grupo_cache,
                     subgrupo_cache=subgrupo_cache,
@@ -242,6 +248,7 @@ class SyncService:
         edital_id: int,
         modalidade_id: int | None,
         payload: dict[str, Any],
+        categoria_repository: CategoriaRepository,
         categoria_cache: dict[str, Categoria],
         grupo_cache: dict[tuple[int, str], Grupo],
         subgrupo_cache: dict[tuple[int, str], Subgrupo],
@@ -260,6 +267,7 @@ class SyncService:
         self._seed_taxonomies_from_payload(
             session=session,
             payload=payload,
+            categoria_repository=categoria_repository,
             vaga_id=vaga.id,
             categoria_cache=categoria_cache,
             grupo_cache=grupo_cache,
@@ -282,6 +290,7 @@ class SyncService:
             self._seed_taxonomies_from_payload(
                 session=session,
                 payload=inscricao_payload,
+                categoria_repository=categoria_repository,
                 vaga_id=vaga.id,
                 categoria_cache=categoria_cache,
                 grupo_cache=grupo_cache,
@@ -297,6 +306,7 @@ class SyncService:
                 inscricao_id=inscricao.id,
                 payload=inscricao_payload,
                 default_vaga_id=vaga.id,
+                categoria_repository=categoria_repository,
                 categoria_cache=categoria_cache,
                 grupo_cache=grupo_cache,
                 subgrupo_cache=subgrupo_cache,
@@ -313,6 +323,7 @@ class SyncService:
             inscricao_id=None,
             payload=payload,
             default_vaga_id=vaga.id,
+            categoria_repository=categoria_repository,
             categoria_cache=categoria_cache,
             grupo_cache=grupo_cache,
             subgrupo_cache=subgrupo_cache,
@@ -332,6 +343,7 @@ class SyncService:
         inscricao_id: int | None,
         payload: dict[str, Any],
         default_vaga_id: int | None,
+        categoria_repository: CategoriaRepository,
         categoria_cache: dict[str, Categoria],
         grupo_cache: dict[tuple[int, str], Grupo],
         subgrupo_cache: dict[tuple[int, str], Subgrupo],
@@ -344,6 +356,7 @@ class SyncService:
                 session=session,
                 payload=anexo_payload,
                 vaga_id=default_vaga_id,
+                categoria_repository=categoria_repository,
                 categoria_cache=categoria_cache,
                 grupo_cache=grupo_cache,
                 subgrupo_cache=subgrupo_cache,
@@ -372,6 +385,7 @@ class SyncService:
         session,
         payload: dict[str, Any],
         vaga_id: int | None,
+        categoria_repository: CategoriaRepository,
         categoria_cache: dict[str, Categoria],
         grupo_cache: dict[tuple[int, str], Grupo],
         subgrupo_cache: dict[tuple[int, str], Subgrupo],
@@ -380,6 +394,7 @@ class SyncService:
             self._sync_taxonomy_payload(
                 session=session,
                 payload=categoria_payload,
+                categoria_repository=categoria_repository,
                 vaga_id=vaga_id,
                 categoria_cache=categoria_cache,
                 grupo_cache=grupo_cache,
@@ -391,6 +406,7 @@ class SyncService:
         session,
         payload: dict[str, Any],
         vaga_id: int | None,
+        categoria_repository: CategoriaRepository,
         categoria_cache: dict[str, Categoria],
         grupo_cache: dict[tuple[int, str], Grupo],
         subgrupo_cache: dict[tuple[int, str], Subgrupo],
@@ -399,6 +415,7 @@ class SyncService:
             session=session,
             payload=payload,
             vaga_id=vaga_id,
+            categoria_repository=categoria_repository,
             categoria_cache=categoria_cache,
             grupo_cache=grupo_cache,
             subgrupo_cache=subgrupo_cache,
@@ -414,7 +431,6 @@ class SyncService:
                 categoria=categoria,
                 nome=grupo_nome,
                 descricao=self._pick_first(grupo_payload or {}, "descricao", "resumo"),
-                payload=grupo_payload,
                 grupo_cache=grupo_cache,
             )
             for subgrupo_payload in self._extract_collection(grupo_payload, grupo_payload, "subgrupos", "subgroups"):
@@ -426,7 +442,6 @@ class SyncService:
                     grupo=grupo,
                     nome=subgrupo_nome,
                     descricao=self._pick_first(subgrupo_payload, "descricao", "resumo"),
-                    payload=subgrupo_payload,
                     subgrupo_cache=subgrupo_cache,
                 )
 
@@ -437,6 +452,7 @@ class SyncService:
         session,
         payload: dict[str, Any],
         vaga_id: int | None,
+        categoria_repository: CategoriaRepository,
         categoria_cache: dict[str, Categoria],
         grupo_cache: dict[tuple[int, str], Grupo],
         subgrupo_cache: dict[tuple[int, str], Subgrupo],
@@ -451,12 +467,9 @@ class SyncService:
             categoria_nome = self._extract_name(categoria_payload)
         categoria = None
         if categoria_nome:
-            categoria = self._get_or_create_categoria(
-                session=session,
+            categoria = self._get_categoria(
+                categoria_repository=categoria_repository,
                 nome=categoria_nome,
-                descricao=self._pick_first(categoria_payload, "descricao", "resumo"),
-                payload=categoria_payload if isinstance(categoria_payload, dict) else payload,
-                vaga_id=vaga_id,
                 categoria_cache=categoria_cache,
             )
 
@@ -475,7 +488,6 @@ class SyncService:
                 categoria=categoria,
                 nome=grupo_nome,
                 descricao=self._pick_first(grupo_payload, "descricao", "resumo"),
-                payload=grupo_payload,
                 grupo_cache=grupo_cache,
             )
 
@@ -494,46 +506,24 @@ class SyncService:
                 grupo=grupo,
                 nome=subgrupo_nome,
                 descricao=self._pick_first(subgrupo_payload or {}, "descricao", "resumo"),
-                payload=subgrupo_payload,
                 subgrupo_cache=subgrupo_cache,
             )
 
         return categoria, grupo, subgrupo
 
-    def _get_or_create_categoria(
+    def _get_categoria(
         self,
-        session,
+        categoria_repository: CategoriaRepository,
         nome: str,
-        descricao: str | None,
-        payload: dict[str, Any],
-        vaga_id: int | None,
         categoria_cache: dict[str, Categoria],
-    ) -> Categoria:
+    ) -> Categoria | None:
         key = nome.strip().lower()
         if key in categoria_cache:
-            categoria = categoria_cache[key]
-            if vaga_id and categoria.vaga_id is None:
-                categoria.vaga_id = vaga_id
-            return categoria
+            return categoria_cache[key]
 
-        categoria = session.scalar(select(Categoria).where(Categoria.nome == nome))
+        categoria = categoria_repository.get_by_descricao(nome)
         if categoria is None:
-            categoria = Categoria(
-                nome=nome,
-                descricao=descricao,
-                vaga_id=vaga_id,
-                raw_payload=payload,
-            )
-            session.add(categoria)
-            session.flush()
-        else:
-            if descricao and not categoria.descricao:
-                categoria.descricao = descricao
-            if vaga_id and categoria.vaga_id is None:
-                categoria.vaga_id = vaga_id
-            if payload and categoria.raw_payload is None:
-                categoria.raw_payload = payload
-
+            return None
         categoria_cache[key] = categoria
         return categoria
 
@@ -543,7 +533,6 @@ class SyncService:
         categoria: Categoria,
         nome: str,
         descricao: str | None,
-        payload: dict[str, Any],
         grupo_cache: dict[tuple[int, str], Grupo],
     ) -> Grupo:
         key = (categoria.id, nome.strip().lower())
@@ -561,15 +550,12 @@ class SyncService:
                 categoria_id=categoria.id,
                 nome=nome,
                 descricao=descricao,
-                raw_payload=payload,
             )
             session.add(grupo)
             session.flush()
         else:
             if descricao and not grupo.descricao:
                 grupo.descricao = descricao
-            if payload and grupo.raw_payload is None:
-                grupo.raw_payload = payload
 
         grupo_cache[key] = grupo
         return grupo
@@ -580,7 +566,6 @@ class SyncService:
         grupo: Grupo,
         nome: str,
         descricao: str | None,
-        payload: dict[str, Any],
         subgrupo_cache: dict[tuple[int, str], Subgrupo],
     ) -> Subgrupo:
         key = (grupo.id, nome.strip().lower())
@@ -598,15 +583,12 @@ class SyncService:
                 grupo_id=grupo.id,
                 nome=nome,
                 descricao=descricao,
-                raw_payload=payload,
             )
             session.add(subgrupo)
             session.flush()
         else:
             if descricao and not subgrupo.descricao:
                 subgrupo.descricao = descricao
-            if payload and subgrupo.raw_payload is None:
-                subgrupo.raw_payload = payload
 
         subgrupo_cache[key] = subgrupo
         return subgrupo

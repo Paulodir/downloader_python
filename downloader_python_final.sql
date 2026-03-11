@@ -93,19 +93,12 @@ CREATE TABLE IF NOT EXISTS `downloader_python`.`vagas` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `downloader_python`.`categorias` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `vaga_id` INT NULL,
-  `nome` VARCHAR(120) NOT NULL,
-  `descricao` TEXT NULL,
-  `raw_payload` JSON NULL,
+  `descricao` TEXT NOT NULL,
+  `versao` INT NOT NULL,
+  `status` INT NOT NULL,
   `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  INDEX `ix_categorias_vaga_id` (`vaga_id` ASC),
-  CONSTRAINT `fk_categorias_vagas`
-    FOREIGN KEY (`vaga_id`)
-    REFERENCES `downloader_python`.`vagas` (`id`)
-    ON DELETE CASCADE
-    ON UPDATE NO ACTION
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB;
 
 
@@ -146,7 +139,6 @@ CREATE TABLE IF NOT EXISTS `downloader_python`.`grupos` (
   `categoria_id` INT NULL,
   `nome` VARCHAR(120) NOT NULL,
   `descricao` TEXT NULL,
-  `raw_payload` JSON NULL,
   `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
@@ -167,7 +159,6 @@ CREATE TABLE IF NOT EXISTS `downloader_python`.`subgrupos` (
   `grupo_id` INT NULL,
   `nome` VARCHAR(120) NOT NULL,
   `descricao` TEXT NULL,
-  `raw_payload` JSON NULL,
   `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),

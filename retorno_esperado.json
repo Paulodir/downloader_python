@@ -1,0 +1,613 @@
+{
+	"meta": {
+		"schema_version": "1.0",
+		"request_context": {
+			"edital_codigo": "12",
+			"filtro": [
+				"solicitacoes",
+				"banca"
+			],
+			"categoria_codigo": [
+				5,
+				6
+			]
+		}
+	},
+	"edital": {
+		"codigo": "12",
+		"descricao": "",
+		"anexos": {
+			"5": [
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				}
+			],
+			"6": [
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				},
+				{
+					"modalidade_codigo": "2517",
+					"modalidade_descricao": "2517",
+					"vaga_codigo": "2517",
+					"vaga_descricao": "2517",
+					"inscricao_codigo": "2517",
+					"inscricao_descricao": "2517",
+					"grupo_codigo": "2517",
+					"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"subgrupo_codigo": "2517",
+					"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+					"anexo_codigo": "2517",
+					"anexo_descricao": "24012025-104040-271119.pdf",
+					"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+					"bytes": "",
+					"extensao": "pdf",
+					"raw_payload": {
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+					}
+				}
+			]
+		}
+	},
+	"raw_payload": {
+		"meta": {
+			"schema_version": "1.0",
+			"descricao": "Estrutura normalizada esperada para alimentar o banco local a partir de uma requisicao da API.",
+			"request_context": {
+				"edital_codigo": "12",
+				"filtro": [
+					"solicitacoes",
+					"banca"
+				],
+				"categoria_codigo": [
+					5,
+					6
+				]
+			}
+		},
+		"edital": {
+			"codigo": "12",
+			"descricao": "",
+			"anexos": {
+				"5": [
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					}
+				],
+				"6": [
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					},
+					{
+						"modalidade_codigo": "2517",
+						"modalidade_descricao": "2517",
+						"vaga_codigo": "2517",
+						"vaga_descricao": "2517",
+						"inscricao_codigo": "2517",
+						"inscricao_descricao": "2517",
+						"grupo_codigo": "2517",
+						"grupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"subgrupo_codigo": "2517",
+						"subgrupo_descricao": "Desejo participar da Vaga especial para PcD",
+						"anexo_codigo": "2517",
+						"anexo_descricao": "24012025-104040-271119.pdf",
+						"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf",
+						"bytes": "",
+						"extensao": "pdf",
+						"raw_payload": {
+							"url": "https://cdn-hml.testes.net.br/candidato/uploads/8442d9419dba843b9e90dc2965be80975a76f124/24012025-104040-271119.pdf"
+						}
+					}
+				]
+			}
+		}
+	}
+}

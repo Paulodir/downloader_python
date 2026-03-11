@@ -7,7 +7,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import Session, sessionmaker
 
 from app.core.config import Config
+from app.database.category_seed import CategoriaSeedData
 from app.models import register_models
+from app.repositories.categoria_repository import CategoriaRepository
 
 
 class DatabaseConnection:
@@ -31,6 +33,8 @@ class DatabaseConnection:
         from app.database.schema import Base
 
         Base.metadata.create_all(self.engine)
+        with self.session() as session:
+            CategoriaRepository(session).ensure_defaults(CategoriaSeedData.DEFAULT_RECORDS)
 
     @contextmanager
     def session(self) -> Iterator[Session]:
